@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Outlet, useParams, Link, useNavigate } from "react-router-dom";
+import SinglePost from "./SinglePost";
 
 const blogposts = [
     { id: 1, title: "First post", author: "Glenn", excerpt: "This is the first post."},
@@ -8,9 +9,9 @@ const blogposts = [
 
 const Home = () => {
     return (
-        <div>
+        <div className="container">
             <h1>Home</h1>
-            <ul>
+            <ul className="no-bullets">
                 {blogposts.map(post => (
                     <li key={post.id}>
                         <h2>{post.title}</h2>

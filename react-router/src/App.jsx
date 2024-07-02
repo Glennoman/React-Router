@@ -4,17 +4,23 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import SinglePost from './pages/SinglePost';
+import Comments from './pages/Comments';
+import "./App.css"
 
 const App = () => {
   return (
     <Router>
       <Navbar />
-      <div className="container">
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/posts/:postId" element={<SinglePost />} />
+          <Route path="/post/:postId" element={<SinglePost />}>
+            <Route path="comments" element={<Comments />} />
+          </Route>
         </Routes>
+      </div>
+      <div>
       </div>
     </Router>
   );

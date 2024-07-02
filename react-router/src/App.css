@@ -1,8 +1,35 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
+} */
+
+.no-bullets {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container-navbar {
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.container-singlePost {
+  display: flex;
+}
+
+.container-singlePost button {
+  height: fit-content;
+  align-self: end;
 }
 
 .logo {
