@@ -1,15 +1,22 @@
 import { React } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
-    return (
-        <nav>
-            <ul className="container-navbar no-bullets">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-            </ul>
-        </nav>
-    );
+  const location = useLocation();
+
+  return (
+    <nav>
+      <ul className="container-navbar no-bullets">
+        <li className={location.pathname === "/" ? "active" : ""}>
+          <Link to="/">Home</Link>
+        </li>
+        <li className={location.pathname === "/about" ? "active" : ""}>
+          <Link to="/about">About</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 };
 
 export default Navbar;

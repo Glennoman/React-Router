@@ -1,0 +1,19 @@
+.container-navbar {
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+  }
+  .no-bullets {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .container-navbar li {
+    padding: 0.5rem 1rem;
+  }
+
+  .container-navbar li.active a {
+    color: #fff;
+    background: #007bff
+    border-radius: 4px;
+  }
